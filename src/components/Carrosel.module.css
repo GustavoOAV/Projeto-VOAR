@@ -1,0 +1,51 @@
+/* Container principal */
+.container {
+  margin-top: 11vh;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Container do Swiper */
+.swiper-container {
+  width: 75%;
+  height: 600px;
+  position: relative;
+}
+
+/* Slides */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Botões de navegação (laterais) */
+:global(.swiper-button-prev),
+:global(.swiper-button-next) {
+ display: none !important;
+}
+
+
+@media (max-width: 1024px) {
+  :global(.swiper-button-prev),
+  :global(.swiper-button-next) {
+    display: none !important;
+  }
+
+  .swiper-container {
+    width: 90%;
+    height: 400px;
+  }
+}

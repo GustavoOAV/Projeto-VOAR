@@ -1,0 +1,153 @@
+/* Estilos gerais */
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    opacity: 0.7;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    line-height: 9vh;
+    position: fixed; 
+    top: 0;          
+    left: 0;         
+    width: 100%;     
+    z-index: 1000;   
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+}
+
+.navList li {
+    letter-spacing: 1px;
+    margin-left: 32px;
+}
+
+/* Estilos do menu mobile */
+.mobileMenu {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+}
+
+.mobileMenu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Overlay do menu */
+.menuOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Estilos quando o menu está ativo (aberto) */
+.mobileMenu.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobileMenu.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.mobileMenu.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.menuOverlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Versão mobile */
+@media (max-width: 768px) {
+    .nav {
+        height: 8vh; /* Reduz a altura da Navbar em telas menores */
+    }
+    
+    .mobileMenu {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+    }
+
+    .navList {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 45%;
+        height: 70vh;
+        background: #000;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        transition: left 0.5s ease;
+        z-index: 1000;
+        border-radius: 5px;
+    }
+
+    .navList.active {
+        left: 0;
+    }
+
+    .navList li {
+        margin: 25px 0;
+        margin-left: 0;
+        opacity: 0;
+        transform: translateX(20px);
+        transition: all 0.4s ease;
+    }
+
+    .navList.active li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Efeito de aparecimento sequencial dos itens */
+    .navList.active li:nth-child(1) {
+        transition-delay: 0.2s;
+    }
+    .navList.active li:nth-child(2) {
+        transition-delay: 0.3s;
+    }
+    .navList.active li:nth-child(3) {
+        transition-delay: 0.4s;
+    }
+    .navList.active li:nth-child(4) {
+        transition-delay: 0.5s;
+    }
+    .navList.active li:nth-child(5) {
+        transition-delay: 0.6s;
+    }
+    .navList.active li:nth-child(6) {
+        transition-delay: 0.7s;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
