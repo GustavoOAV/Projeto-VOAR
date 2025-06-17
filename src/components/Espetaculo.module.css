@@ -1,0 +1,300 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Georgia', serif;
+  color: #333;
+  line-height: 1.8;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.highlightSection {
+  background: #a7a3a3;
+  padding: 30px;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+.mainText {
+  margin-bottom: 40px;
+}
+
+.imageTextSection {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+.textBlock {
+  flex: 2;
+}
+
+.textBlock p {
+  margin-bottom: 20px;
+}
+
+.imageWrapper {
+  flex: 1;
+}
+
+.featuredImage {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+blockquote {
+  border-left: 3px solid #a7a3a3;
+  padding-left: 20px;
+  margin: 30px 0;
+  font-style: italic;
+  color: #555;
+}
+
+.testimonial {
+  background: #a7a3a3;
+  padding: 25px;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+.finalText {
+  margin-top: 40px;
+}
+
+.finalText p {
+  margin-bottom: 20px;
+}
+
+em {
+  font-style: italic;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+/* Scroll animation */
+.scrollHidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: zoom-out;
+}
+
+.modalImage {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.sectionBase {
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scrollHidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Ficha Técnica - Novo Estilo */
+.technicalSheet {
+  margin-top: 60px;
+  background: #f5f5f5;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 300;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.sectionTitle:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: #a7a3a3;
+  margin: 15px auto 0;
+}
+
+.technicalContent {
+  display: flex;
+  gap: 40px;
+}
+
+.technicalList {
+  flex: 1;
+}
+
+.technicalRow {
+  display: flex;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #ddd;
+}
+
+.technicalLabel {
+  font-weight: 600;
+  color: #555;
+  width: 200px;
+  min-width: 200px;
+  font-size: 0.95rem;
+}
+
+.technicalValue {
+  color: #333;
+  flex: 1;
+}
+
+.technicalImage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.technicalImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.technicalImage img:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 900px) {
+  .technicalContent {
+    flex-direction: column;
+  }
+  
+  .technicalImage {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .technicalSheet {
+    padding: 25px;
+  }
+  
+  .technicalRow {
+    flex-direction: column;
+  }
+  
+  .technicalLabel {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .imageTextSection {
+    flex-direction: column;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
