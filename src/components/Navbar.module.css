@@ -30,6 +30,10 @@
     letter-spacing: 1px;
     margin-left: 32px;
 }
+.navList li a {
+  cursor: pointer;
+  text-decoration: none;
+}
 
 /* Estilos do menu mobile */
 .mobileMenu {

@@ -23,14 +23,13 @@ const Espetaculo = () => {
   const [ref4, vis4] = useInView();
   const [ref5, vis5] = useInView();
   const [ref6, vis6] = useInView();
-  const [ref7, vis7] = useInView();
 
   return (
-    <div className={styles.container}>
+    <div id="Espetaculo" className={styles.container}>
       <h1 className={styles.title}>O Espetáculo</h1>
 
       <div ref={ref1} className={sectionClass(vis1)}>
-        <div id="Espetaculo" className={styles.highlightSection}>
+        <div className={styles.highlightSection}>
           <p>
             <em>Voar é o Que Me Põe de Pé</em> é inspirado e construído a partir
             de poemas de Geni Guimarães e da prosa de Marcelino Freire. O

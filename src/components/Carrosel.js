@@ -13,7 +13,7 @@ const data = [
 
 function Carrosel() {
   return (
-    <div id='Carrosel' className={styles.container}>
+    <div id='Inicio' className={styles.container}>
       <Swiper
   modules={[Navigation, Pagination, Autoplay]}
   navigation

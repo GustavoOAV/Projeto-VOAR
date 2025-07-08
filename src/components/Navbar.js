@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from "./Navbar.module.css";
+import { Link } from 'react-scroll'; 
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,9 +9,12 @@ function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <div className={styles.navbar}>
-      {/* Overlay quando menu está aberto */}
       {isMenuOpen && (
         <div className={styles.menuOverlay} onClick={toggleMenu}></div>
       )}
@@ -26,12 +30,72 @@ function Navbar() {
         </div>
         
         <ul className={`${styles.navList} ${isMenuOpen ? styles.active : ''}`}>
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/">Espetaculo</a></li>
-          <li><a href="/">Elenco</a></li>
-          <li><a href="/">Critica</a></li>
-          <li><a href="/">Galeria</a></li>
-          <li><a href="/">Assita ao Trailer</a></li>
+          <li>
+            <Link 
+              to="Inicio" 
+              smooth={true} 
+              duration={500} 
+              offset={-60}
+              onClick={closeMenu}
+            >
+              Início
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="Espetaculo" 
+              smooth={true} 
+              duration={500} 
+              offset={-60}
+              onClick={closeMenu}
+            >
+              Espetáculo
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="Elenco" 
+              smooth={true} 
+              duration={500} 
+              offset={-60}
+              onClick={closeMenu}
+            >
+              Elenco
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="Critica" 
+              smooth={true} 
+              duration={500} 
+              offset={-60}
+              onClick={closeMenu}
+            >
+              Crítica
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="galeria" 
+              smooth={true} 
+              duration={500} 
+              offset={-60}
+              onClick={closeMenu}
+            >
+              Galeria
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="trailer" 
+              smooth={true} 
+              duration={500} 
+              offset={-60}
+              onClick={closeMenu}
+            >
+              Assista ao Trailer
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>
@@ -39,4 +103,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
