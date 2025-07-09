@@ -59,7 +59,7 @@ const Critica = () => {
 
   return (
     <section id="Critica" className={styles.container}>
-      <h2 className={styles.heading}>Critica e Materias</h2>
+      <h2 className={styles.heading}>Criticas e Materias</h2>
       <div className={styles.grid}>
         {criticas.map((item, index) => (
           <CriticaCard
