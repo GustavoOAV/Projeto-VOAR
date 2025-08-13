@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { Link } from 'react-scroll';
 import styles from "./Navbar.module.css";
-import { Link } from 'react-scroll'; 
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -86,7 +86,7 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link 
+            <Link style={{ display: 'none' }}
               to="trailer" 
               smooth={true} 
               duration={500} 

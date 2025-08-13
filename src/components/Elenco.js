@@ -1,6 +1,5 @@
-import React from 'react';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import styles from './Elenco.module.css';
-import { FaInstagram, FaFacebook, FaYoutube, FaTwitter } from 'react-icons/fa';
 
 
 const IconGroup = ({ socialLinks }) => (
@@ -111,10 +110,7 @@ const Elenco = () => {
 
           <IconGroup
   socialLinks={[
-    { Icon: FaInstagram, url: 'https://instagram.com/renatofarias' },
-    { Icon: FaFacebook, url: 'https://facebook.com/renatofarias' },
-    { Icon: FaYoutube, url: 'https://youtube.com/renatofarias' },
-    { Icon: FaTwitter, url: 'https://twitter.com/renatofarias' },
+    { Icon: FaInstagram, url: 'https://instagram.com/fariasre' },
   ]}
 />
         </div>
