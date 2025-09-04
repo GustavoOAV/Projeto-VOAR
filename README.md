@@ -1,7 +1,7 @@
 # 🎭 Projeto VOAR
 
 > **"Voar É o Que Me Põe de Pé"**  
-> Um site oficial para a peça solo de dança e poesia, interpretada por Olívia Araújo, que explora os desafios e vitórias da mulher negra na sociedade contemporânea.
+> Um site oficial para a peça solo de poesia, interpretada por Olívia Araújo.
 
 ---
 
