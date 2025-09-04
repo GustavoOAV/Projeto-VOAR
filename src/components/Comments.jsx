@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import {
-    addComment,
-    deleteComment,
-    getCommentsByPost,
-    getUserId,
-    likeComment,
-    unlikeComment
+  addComment,
+  deleteComment,
+  getCommentsByPost,
+  getUserId,
+  likeComment,
+  unlikeComment
 } from '../services/commentService';
 import styles from './Comments.module.css';
 
@@ -19,11 +19,24 @@ const Comments = ({ postId }) => {
   const [myDeleteCodes, setMyDeleteCodes] = useState({});
   const [currentUserId, setCurrentUserId] = useState('');
 
-  useEffect(() => {
-    loadComments();
-    loadDeleteCodes();
-    setCurrentUserId(getUserId());
-  }, [postId]);
+ useEffect(() => {
+  // Mova a definição de loadComments para dentro do useEffect
+  const loadComments = async () => {
+    try {
+      setLoading(true);
+      const commentsData = await getCommentsByPost(postId);
+      setComments(commentsData);
+    } catch (error) {
+      console.error('Erro ao carregar comentários:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  loadComments();
+  loadDeleteCodes();
+  setCurrentUserId(getUserId());
+}, [postId]);
 
   const loadComments = async () => {
     try {
